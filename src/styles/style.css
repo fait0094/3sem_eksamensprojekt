@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ------------- GLOBAL ------------- */
+
+  /* ------------- ALIAS ------------- */
+  --primary_blue: #1f9ecd;
+  --primary_black: #323332;
+  --primary_white: #fcfcfc;
+  --secondary_beige: #f1f1e8;
+  --secondary_eggwhite: #fcfbfa;
+  --accent_green: #2ca900;
+
+  /* ------------- COMPONENTS ------------- */
+  /* Header */
+  --primary_menu_bg: var(--primary_blue);
+  --secondary_menu_bg: var(--secondary_eggwhite);
+
+  /* Footer */
+  --footer_black_bg: var(--primary_black);
+
+  /* Font */
+  --font_black: var(--primary_black);
+  --font_white: var(--primary_white);
+
+  /* Buttons */
+  --cta_green: var(--accent_green);
+  --cta_blue: var(--primary_blue);
+
+  /* Andet */
+  --infoboks_bg: var(--secondary_beige);
+
+  /* SPACING */
+  --spacing-xxs: 0.5rem;
+  --spacing-xs: 1rem;
+  --spacing-sm: 1.5rem;
+  --spacing-md: 2rem;
+  --spacing-md2: 2.1rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 5rem;
+}

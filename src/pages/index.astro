@@ -1,4 +1,10 @@
 ---
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import CardSektion from "../components/CardSektion.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "..//styles/style.css";
 ---
 
 <html lang="en">
@@ -8,8 +14,16 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>3. SEM - Eksamensprojekt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Astro</h1>
+    <Header />
+    <Footer />
   </body>
 </html>
