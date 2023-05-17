@@ -10,14 +10,36 @@
 
 :root {
   /* ------------- GLOBAL ------------- */
+  /* Farver */
+
+  /* Font scale heading */
+  --text-6: 4.209rem;
+  --text-5: 3.157rem;
+  --text-4: 2.3569rem;
+  --text-3: 1.777rem;
+  --text-2: 1.333rem;
+
+  /* Font scale body text */
+  --text-1: 1rem;
+  --text-0: 0.75rem;
 
   /* ------------- ALIAS ------------- */
+  /* Farver */
   --primary_blue: #1f9ecd;
   --primary_black: #323332;
   --primary_white: #fcfcfc;
   --secondary_beige: #f1f1e8;
   --secondary_eggwhite: #fcfbfa;
   --accent_green: #2ca900;
+
+  /* Font */
+  --heading-h1: var(--text-6);
+  --heading-h2: var(--text-5);
+  --heading-h3: var(--text-4);
+  --heading-h4: var(--text-3);
+  --body-lead: var(--text-2);
+  --body-default: var(--text-1);
+  --body-small: var(--text-0);
 
   /* ------------- COMPONENTS ------------- */
   /* Header */
@@ -47,4 +69,43 @@
   --spacing-lg: 3rem;
   --spacing-xl: 4rem;
   --spacing-xxl: 5rem;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: var(--body-default);
+  line-height: 1.5;
+}
+
+h1,
+.heading-h1 {
+  font-size: var(--heading-h1);
+  font-weight: 800;
+
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: var(--spacing-30);
+}
+
+h2,
+.heading-2 {
+  font-size: var(--heading-h2);
+  font-weight: 800;
+}
+
+h3,
+.heading-3 {
+  font-size: var(--heading-h3);
+  font-weight: 800;
+}
+
+h4,
+.heading-4 {
+  font-size: var(--heading-h4);
+  font-weight: 700;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  max-width: 65ch;
 }
