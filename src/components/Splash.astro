@@ -1,0 +1,18 @@
+---
+const { title, description, imgPath } = Astro.props;
+import "..//styles/style.css";
+---
+
+<section>
+  <div class="hero" style={`background-image: url(${imgPath});`}>
+    <div class="hero-overlay bg-opacity-20"></div>
+    <div class="hero-content text-neutral-content">
+      <div class="">
+        <h1 class="">{title}</h1>
+        <p class="">{description}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style></style>

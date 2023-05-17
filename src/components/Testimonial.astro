@@ -1,0 +1,20 @@
+---
+const { title, description, imgPath, ejer } = Astro.props;
+
+import "..//styles/style.css";
+---
+
+<section>
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <figure class="px-10 pt-10">
+      <img class="rounded-md" src={imgPath} alt="Kæledyr" />
+    </figure>
+    <div class="card-body items-center text-center">
+      <h2 class="card-title">{title}</h2>
+      <p>{description}</p>
+      <p>{ejer}</p>
+    </div>
+  </div>
+</section>
+
+<style></style>
