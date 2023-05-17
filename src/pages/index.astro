@@ -6,12 +6,25 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Faktaboks from "../components/Faktaboks.astro";
 
 import "..//styles/style.css";
+import Testimonial from "../components/Testimonial.astro";
+import Splash from "../components/Splash.astro";
 ---
 
 <MainLayout title="3. SEM - Eksamensprojekt">
+  <Splash
+    title="Donation"
+    description="Din donation har magten til at forvandle og redde liv. Når du støtter os med en donation, giver du dyrene en anden chance for et bedre liv."
+    imgPath="/public/splash/donation.jpg"
+  />
   <Button variant="primary_1" size="medium">Støt dyrene</Button>
   <Button variant="primary_2" size="medium">Find kæledyr</Button>
   <Button variant="secondary" size="medium">Næste</Button>
-  <Card imgPath="adoption/basse.webp" title="Basse" icon="gender_icon.svg" race="Schæfer / Husky / Border / Berner" description="Tempor ea duis non veniam ad cillum ex amet ullamco sunt est. Ex fugiat labore commodo esse ad incididunt nostrud consequat fugiat esse dolore ut quis culpa. Mollit voluptate dolore consectetur esse ullamco dolor consequat consequat. Veniam ad cillum sint cillum mollit qui. Sit nostrud qui eiusmod quis velit ullamco minim nostrud laboris occaecat exercitation cupidatat eu. Duis sint occaecat ea eiusmod occaecat ullamco velit excepteur. Exercitation nulla deserunt laboris consequat laboris ad eu ad consectetur nulla id exercitation officia." />
-  <Faktaboks header="Praktiske informationer" iconlist="blue_paw.svg" text="Do mollit occaecat id fugiat laboris sunt in id sunt ex nulla sit quis." />
+  <Testimonial
+    title="»De dygtigste matchmakere«"
+    description="“De er dygtige matchmakere, og grundige i deres research af adoptionsfamilier. I er så glade for dyr, og det var vigtigt for mig, at Buller skulle være glad fra dag 1, uanset hvad han laver af unoder.”"
+    ejer="Betina, tidligere ejer af Buller"
+    imgPath="/public/adoption/basse.webp"
+  />
+
+  <Card />
 </MainLayout>

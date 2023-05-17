@@ -3,9 +3,50 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import CardSektion from "../components/CardSektion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Splash from "../components/Splash.astro";
+import Intro from "../components/Intro.astro";
 import "..//styles/style.css";
 ---
 
 <MainLayout title="3. SEM - Eksamensprojekt">
+  <Splash
+    title="Støt dyrene"
+    description="Din donation bidrager til, at dyrene får den pleje, mad og medicin, de har brug for. Hver enkelt bidrag gør en forskel og er med til at redde flere liv."
+    imgPath="/public/splash/donation.jpg"
+  />
+  <Intro
+    title="Støt dyrene og gør en forskel!"
+    description="Dyreværnet har brug for din hjælp til at sikre dyrenes velfærd og trivsel. Ved at støtte vores arbejde kan du bidrage til at redde og beskytte hjemløse dyr og give dem en chance for et bedre liv."
+  />
   <!-- Indsæt indhold i main her -->
+  <section>
+    <Card
+      title="Donation"
+      description="Vil du hjælpe Dyreværnet med at redde dyr?  Vælg mellem enkelt, månedlig eller virksomhedsdonation og vær med til at redde dyreliv."
+      imgPath="/public/adoption/basse.webp"
+      link_side="donation.html"
+    />
+    <Card
+      title="Betænk dyrene i testamentet"
+      description="Testamentariske gaver er meget vigtige for Dyreværnets arbejde og eksistens. Vi kan hjælpe med oprettelse af testamente."
+      imgPath="/public/adoption/basse.webp"
+      link_side=""
+    />
+    <Card
+      title="Indsamling via Facebook"
+      description="På Facebook kan du nemt samle penge ind til Dyreværnets hunde, katte, kaniner & smådyr"
+      imgPath="/public/adoption/basse.webp"
+      link_side=""
+    />
+  </section>
 </MainLayout>
+
+<style>
+  @media (min-width: 950px) {
+    section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+</style>
