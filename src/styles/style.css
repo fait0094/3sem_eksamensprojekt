@@ -77,6 +77,10 @@ body {
   line-height: 1.5;
 }
 
+main {
+  margin: var(--spacing-md);
+}
+
 h1,
 .heading-h1 {
   font-size: var(--heading-h1);
