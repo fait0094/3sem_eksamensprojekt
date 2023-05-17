@@ -1,4 +1,38 @@
 ---
+import "..//styles/style.css";
+const { variant = "primary_1", size = "medium" } = Astro.props;
 ---
 
-<style></style>
+<button data-variant={variant} data-size={size} class="btn"><slot /></button>
+
+<style>
+  /* Variants */
+  [data-variant="primary_1"] {
+    background: var(--cta_green);
+    color: var(--font-white);
+  }
+
+  [data-variant="primary_2"] {
+    background: var(--cta_blue);
+    color: var(--font-white);
+  }
+
+  [data-variant="secondary"] {
+    background-color: var(--cta_black);
+    color: var(--font-white);
+  }
+
+  /* Sizes */
+  /* [data-size="medium"] {
+    font-size: var(--font-size-base);
+    min-height: var(--space-xxxl);
+    padding-block: var(--space-xs);
+    padding-inline: var(--space-xl);
+  }
+  [data-size="small"] {
+    font-size: var(--font-size-small);
+    min-height: var(--space-xl);
+    padding-block: var(--space-xxxs);
+    padding-inline: var(--space-md);
+  } */
+</style>
