@@ -56,6 +56,7 @@
   /* Buttons */
   --cta_green: var(--accent_green);
   --cta_blue: var(--primary_blue);
+  --cta_black: var(--primary_black);
 
   /* Andet */
   --infoboks_bg: var(--secondary_beige);
