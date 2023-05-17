@@ -1,29 +1,28 @@
 ---
-const { title, description, imgPath, icon} = Astro.props;
+const { title, description, imgPath, icon, link_side } = Astro.props;
 
 import "..//styles/style.css";
 import Button from "./Button.astro";
-
 ---
 
 <section>
-<div class="card w-96 bg-base-100 shadow-xl">
-  <figure class="px-10 pt-10">
-       <img src={imgPath} alt="hund_til_adoption">
-  </figure>
-  <div class="card-body items-center text-center">
-    <div>
-    <h3 class="card-title">{title}</h3>
-           <img src={icon} alt="icon_gender">
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <figure class="px-10 pt-10">
+      <img src={imgPath} alt="hund_til_adoption" />
+    </figure>
+    <div class="card-body items-center text-center">
+      <div>
+        <h3 class="card-title">{title}</h3>
+        <img src={icon} alt="icon_gender" />
+      </div>
+      <p>{description}</p>
+      <div class="card-actions">
+        <a href={link_side}>
+          <Button variant="primary">Læs mere</Button>
+        </a>
+      </div>
     </div>
-    <p>{description}</p>
-    <div class="card-actions">
-<Button variant="primary">Læs mere</Button>    </div>
   </div>
-</div>
+
+  <style></style>
 </section>
-
-<style>
-
-    
-</style>

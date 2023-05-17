@@ -18,5 +18,164 @@ import "..//styles/style.css";
     title="Din donation gør en forskel"
     description="Vi har gjort det nemt og enkelt at bidrage med en donation. Vælg mellem en enkel, månedlig eller virksomheds-donation og udfyld formularen."
   />
+
   <!-- Indsæt indhold i main her -->
+  <div class="grid">
+    <section class="form">
+      <div class="steps">
+        <ul class="steps">
+          <li class="step step-primary">Udvælg</li>
+          <li class="step">Oplysninger</li>
+          <li class="step">Betaling</li>
+          <li class="step">Bekræftelse</li>
+        </ul>
+      </div>
+      <div class="cards">
+        <Card
+          title="Enkel donation"
+          description="Med denne mulighed donerer du et engangsbeløb og du bestemmer selv beløbets størrelse."
+          imgPath="/public/ikoner/hjerte-ikon.png"
+        />
+        <Card
+          title="Månedlig donation"
+          description=" De fleste vælger denne mulighed, hvor du kan vælge, hvilket beløb du ønsker at støtte dyrene med hver måned."
+          imgPath="/public/ikoner/hjerte-ikon.png"
+        />
+        <Card
+          title="Virksomhedsdonation"
+          description="Vil din virksomhed hjælpe Dyreværnet med at redde dyr? Man kan hjælpe med en donation eller ved at blive sponsor."
+          imgPath="/public/ikoner/hjerte-ikon.png"
+        />
+      </div>
+      <Button>Næste</Button>
+    </section>
+
+    <section class="info">
+      <div>
+        <h3>Bankoverførsel</h3>
+        <p>
+          Du kan også overføre et beløb til vores donationskonto: 5329 -
+          0242143.
+        </p>
+      </div>
+
+      <div>
+        <h3>Vores dedikation siden 1898</h3>
+        <p>
+          Siden 1898 har vi hjulpet dyr fra et liv med misrøgt, svigt og
+          usikkerhed til et liv med kærlighed, omsorg og i sidste ende: En
+          blivende familie.
+        </p>
+      </div>
+
+      <div>
+        <h3>Spar 10% på din dyreforsikring</h3>
+        <p>
+          Vidste du, at når du støtter Dyreværnet - som fast bidragsyder eller
+          som medlem - kan du få 10% på din dyreforsikring hos vores
+          samarbejdspartner og hovedsponsor Agria Dyreforsikring.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="form-control mx-auto w-full max-w-xl gap-3">
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text">Red pill</span>
+          <input
+            type="radio"
+            name="radio-10"
+            class="radio checked:bg-red-500"
+            checked
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text">Blue pill</span>
+          <input
+            type="radio"
+            name="radio-10"
+            class="radio checked:bg-blue-500"
+            checked
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text">Red pill</span>
+          <input
+            type="radio"
+            name="radio-10"
+            class="radio checked:bg-red-500"
+            checked
+          />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text">Red pill</span>
+          <input
+            type="radio"
+            name="radio-10"
+            class="radio checked:bg-red-500"
+            checked
+          />
+        </label>
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text text-lg text-white">Fulde navn</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Indtast navn"
+          class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+        />
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text text-lg text-white">Email</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Indtast email"
+          class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+        />
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text text-lg text-white">Telefonnummer</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Indtast emne"
+          class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+        />
+      </div>
+
+      <Button variant="primary">Næste</Button>
+    </div>
+  </section>
 </MainLayout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .info {
+    grid-row-start: 1;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+</style>
