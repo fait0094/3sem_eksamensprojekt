@@ -1,5 +1,5 @@
 ---
-const {header, text} = Astro.props;
+const {header, text, iconlist} = Astro.props;
 import "..//styles/style.css";
 
 ---
@@ -9,7 +9,10 @@ import "..//styles/style.css";
     {header}
   </h3>
   <div class="flex gap-6">
-    <img src="blue_paw.svg" alt="hund_til_adoption" />
+    <img src={iconlist} alt="hund_til_adoption" />
+    <img src={iconlist} alt="hund_til_adoption" />
+    <img src={iconlist} alt="hund_til_adoption" />
+    <img src={iconlist} alt="hund_til_adoption" />
     <p>{text}</p>
   </div>
 </section>
