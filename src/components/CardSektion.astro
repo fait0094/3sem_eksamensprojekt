@@ -1,64 +1,14 @@
 ---
 const { title, description, imgPath, icon, race} = Astro.props;
 
-import CardAdopter from "./CardAdopter.astro"
+import Card from "./Card.astro"
 import Button from "./Button.astro"
 import "..//styles/style.css";
 ---
 
-<section>
-<div class="card w-96 bg-base-100 shadow-xl">
-  <figure class="px-10 pt-10">
-       <img src={imgPath} alt="hund_til_adoption">
-  </figure>
-  <div class="card-body">
-    <div class="flex justify-between">
-    <h3 class="card-title">{title}</h3>
-    <img src={icon} alt="icon_gender">
-    </div>
-    <h4 class="race">{race}</h4>
-    <p>{description}</p>
-    <div class="card-actions">
-<Button variant="primary">Læs mere</Button>    </div>
-  </div>
-
+<section class="flex">
+<Card></Card>
+<Card></Card>
+<Card></Card>
 </section>
-
-
-<section>
-<div class="card w-96 bg-base-100 shadow-xl">
-  <figure class="px-10 pt-10">
-       <img src={imgPath} alt="hund_til_adoption">
-  </figure>
-  <div class="card-body">
-    <div class="flex justify-between">
-    <h3 class="card-title">{title}</h3>
-    <img src={icon} alt="icon_gender">
-    </div>
-    <h4 class="race">{race}</h4>
-    <p>{description}</p>
-    <div class="card-actions">
-<Button variant="primary">Læs mere</Button>    </div>
-  </div>
-
-</section>
-
-<section>
-<div class="card w-96 bg-base-100 shadow-xl">
-  <figure class="px-10 pt-10">
-       <img src={imgPath} alt="hund_til_adoption">
-  </figure>
-  <div class="card-body">
-    <div class="flex justify-between">
-    <h3 class="card-title">{title}</h3>
-    <img src={icon} alt="icon_gender">
-    </div>
-    <h4 class="race">{race}</h4>
-    <p>{description}</p>
-    <div class="card-actions">
-<Button variant="primary">Læs mere</Button>    </div>
-  </div>
-
-</section>
-
 <style></style>
