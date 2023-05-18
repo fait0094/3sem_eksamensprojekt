@@ -6,17 +6,28 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Splash from "../components/Splash.astro";
 import Intro from "../components/Intro.astro";
 import "..//styles/style.css";
+import Faktaboks from "../components/Faktaboks.astro";
 ---
 
 <MainLayout title="3. SEM - Eksamensprojekt">
-  <Splash
-    title="Donation"
-    description="Din donation har magten til at forvandle og redde liv. Når du støtter os med en donation, giver du dyrene en anden chance for et bedre liv."
-    imgPath="/public/splash/donation.jpg"
-  />
-  <Intro
-    title="Din donation gør en forskel"
-    description="Vi har gjort det nemt og enkelt at bidrage med en donation. Vælg mellem en enkel, månedlig eller virksomheds-donation og udfyld formularen."
-  />
+  <Splash title="Værd at vide om os" description="Find alt du skal vide om Dyreværnet her på siden." imgPath="/public/splash/om.webp" />
+  <Intro title="Om Dyreværnet" />
+
+  <section class="">
+    <h3 class="uppercase">Dyreværnets formål og arbejde</h3>
+    <p>
+      Dyreværnet er en af Danmarks ældste dyreværnsforeninger og vores vision er enkel, og fungerer som ledestjerne i alle Dyreværnets tiltag, nemlig at »Alle kæledyr i Danmark skal have et godt hjem«. Vores vision går hånd i hånd med vores holdning om at »Hver en pote tæller«.
+      <p>Det vil sige at hos Dyreværnet gør vi alt, hvad der står i vores magt for at give dyrene en chance, og vi går langt for at undgå aflivning. Vi giver, takket være vores internater, dyreklinikker og adoptionsafdeling, dyrene et godt og værdigt liv - fuld af kærlighed.</p>
+    </p>
+    <h3 class="uppercase">Dyreværnets historie</h3>
+    <p>
+      Dyreværnet – Foreningen til Værn for Værgeløse Dyr - blev stiftet den 11. marts 1898 med det formål at redde herreløse og hjemløse hunde fra mishandling og aflivning.
+
+      <p>Siden 1910 har foreningen drevet internat forskellige steder i København/Frederiksberg. Det nuværende internatet i Rødovre blev indviet i 1954 og i 2016 indgik Dyreværnet et tæt samarbejde med Søndergaard Hunde- og Kattepension i Kolding, som derfor nu kalder sig Dyreværnet v/Søndergaard Hunde- og Kattepension.</p>
+      <p>I dag kan Dyreværnet huse familiedyr af næsten enhver art. Dyreværnet arbejder også sammen med Krybdyrinternatet, som har mulighed for at hjælpe krybdyr videre ud i nye, kærlige hjem.</p>
+    </p>
+
+    <Faktaboks header="Dyreværnet i korte vuf..."  text="...Hjælper hvert år over 1.200 kæledyr med at finde deres nye familie"/>
+  </section>
   <!-- Indsæt indhold i main her -->
 </MainLayout>
