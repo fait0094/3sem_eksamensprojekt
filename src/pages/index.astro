@@ -1,11 +1,9 @@
 ---
 import Button from "../components/Button.astro";
-import CardAdopter from "../components/CardAdopter.astro";
+import Card from "../components/Card.astro";
 import CardSektion from "../components/CardSektion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Faktaboks from "../components/Faktaboks.astro";
-import Card from "../components/Card.astro";
-
 
 import "..//styles/style.css";
 import Testimonial from "../components/Testimonial.astro";
@@ -19,7 +17,8 @@ import Splash from "../components/Splash.astro";
   <Button variant="secondary" size="medium">Næste</Button>
   <Testimonial title="»De dygtigste matchmakere«" description="“De er dygtige matchmakere, og grundige i deres research af adoptionsfamilier. I er så glade for dyr, og det var vigtigt for mig, at Buller skulle være glad fra dag 1, uanset hvad han laver af unoder.”" ejer="Betina, tidligere ejer af Buller" imgPath="/public/adoption/basse.webp" />
   <Faktaboks text="Ring til os på hverdage mellem 9.30 - 12.00 på telefonnummer 4494 6695" />
-  <CardAdopter title="Basse" imgPath="adoption/basse.webp" icon="gender_icon.svg" race="Schæfer / Husky / Border / Berner" description="Basse er blot 7 måneder gammel, og det er en svær alder, hvor alt kan føles som lidt op ad bakke, men vi er sikre på, at finde hans helt rette match, der er klædt på til opgaven." />
   <CardSektion />
-  <Card kategori="How to" title="SÅDAN HOLDER DU FLÅTERNE VÆK" description="Her har vi samlet mere end 50 års viden og erfaring om Danmarks mest populære kæledyr" />
+ 
+  <Card imgPath="adoption/basse.webp" title="Basse" description="De er dygtige matchmakere, og grundige i deres research af adoptionsfamilier." > <img src="gender_icon.svg" alt="gender-icon"> </Card>
+  <Card imgPath="adoption/basse.webp" kategori="How to" title="Basse" description="De er dygtige matchmakere, og grundige i deres research af adoptionsfamilier." > </Card>
 </MainLayout>

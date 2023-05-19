@@ -1,10 +1,10 @@
 ---
 import Button from "../components/Button.astro";
-import CardAdopter from "../components/CardAdopter.astro";
 import CardSektion from "../components/CardSektion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Splash from "../components/Splash.astro";
 import Intro from "../components/Intro.astro";
+import Card from "../components/Card.astro"
 import "..//styles/style.css";
 ---
 
@@ -20,19 +20,19 @@ import "..//styles/style.css";
   />
   <!-- Indsæt indhold i main her -->
   <section>
-    <CardAdopter
+    <Card
       title="Donation"
       description="Vil du hjælpe Dyreværnet med at redde dyr?  Vælg mellem enkelt, månedlig eller virksomhedsdonation og vær med til at redde dyreliv."
       imgPath="/public/adoption/basse.webp"
       link_side="donation.html"
     />
-    <CardAdopter
+    <Card
       title="Betænk dyrene i testamentet"
       description="Testamentariske gaver er meget vigtige for Dyreværnets arbejde og eksistens. Vi kan hjælpe med oprettelse af testamente."
       imgPath="/public/adoption/basse.webp"
       link_side=""
     />
-    <CardAdopter
+    <Card
       title="Indsamling via Facebook"
       description="På Facebook kan du nemt samle penge ind til Dyreværnets hunde, katte, kaniner & smådyr"
       imgPath="/public/adoption/basse.webp"
