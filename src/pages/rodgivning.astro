@@ -12,12 +12,27 @@ import Card from "../components/Card.astro";
   <Splash title="Dyreværnets tips og tricks" description="Læs om alle de dejlige hunde, katte, kaniner og smådyr her på siden og find netop det dyr der passer perfekt til dit hjem." imgPath="/public/splash/rodgivning_splash.webp" />
   <Intro title="Alt du skal vide om din hund, kat og kanin" description="Læs om alle de dejlige hunde, katte, kaniner og smådyr her på siden og find netop det dyr der passer perfekt til dit hjem." />
 
-  <h3 class="uppercase">Hunde</h3>
-  <CardSektion />
-  <h3 class="uppercase">Katte</h3>
-  <CardSektion />
-  <h3 class="uppercase">Smådyr</h3>
-  <CardSektion />
+  <section>
+    <div>
+      <h3 class="uppercase">Hunde</h3>
+      <CardSektion />
+    </div>
+    <div class="bg-secondary_beige">
+      <h3 class="uppercase">Katte</h3>
+      <CardSektion />
+    </div>
 
-  <!-- Indsæt indhold i main her -->
+    <div>
+      <h3 class="uppercase">Smådyr</h3>
+      <CardSektion />
+    </div>
+  </section>
 </MainLayout>
+
+<style>
+  div {
+    padding: var(--spacing-lg);
+    padding-inline: var(--spacing-xxl);
+  }
+
+</style>

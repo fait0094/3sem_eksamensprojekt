@@ -1,18 +1,14 @@
 ---
-const {header, text, iconlist} = Astro.props;
+const { header, text, iconlist } = Astro.props;
 import "..//styles/style.css";
-
 ---
 
-<section class="bg-secondary_beige w-96 p-12 rounded">
+<section class="">
   <h3>
     {header}
   </h3>
   <div class="flex gap-6">
-    <img src={iconlist} alt="hund_til_adoption" />
-    <img src={iconlist} alt="hund_til_adoption" />
-    <img src={iconlist} alt="hund_til_adoption" />
-    <img src={iconlist} alt="hund_til_adoption" />
+    <slot />
     <p>{text}</p>
   </div>
 </section>
