@@ -5,81 +5,49 @@ import CardSektion from "../components/CardSektion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Splash from "../components/Splash.astro";
 import Intro from "../components/Intro.astro";
-import "..//styles/style.css";
+import "../styles/style.css";
+
+import Alpine from "alpinejs";
+window.Alpine = Alpine;
+Alpine.start();
 ---
 
 <MainLayout title="3. SEM - Eksamensprojekt">
-  <Splash
-    title="Donation"
-    description="Din donation har magten til at forvandle og redde liv. Når du støtter os med en donation, giver du dyrene en anden chance for et bedre liv."
-    imgPath="/public/splash/donation.jpg"
-  />
-  <Intro
-    title="Din donation gør en forskel"
-    description="Vi har gjort det nemt og enkelt at bidrage med en donation. Vælg mellem en enkel, månedlig eller virksomheds-donation og udfyld formularen."
-  />
+  <!-- Your content goes here -->
 
-  <div x-data="{ step: 1 }">
-    <div class="flex justify-center items-center h-screen">
-      <div class="max-w-xl">
-        <div class="mb-4">
-          <!-- <h2 class="text-xl font-bold">Step {{ step }}</h2> -->
-        </div>
-        <div x-show="step === 1">
-          <p>Step 1 content</p>
-          <div>
-            <label class="label">
-              <span class="label-text text-lg text-white">Fulde navn</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Indtast navn"
-              class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
-            />
-          </div>
-
-          <div>
-            <label class="label">
-              <span class="label-text text-lg text-white">Email</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Indtast email"
-              class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
-            />
-          </div>
-
-          <div>
-            <label class="label">
-              <span class="label-text text-lg text-white">Telefonnummer</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Indtast emne"
-              class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
-            />
-          </div>
-        </div>
-        <div x-show="step === 2">
-          <p>Step 2 content</p>
-        </div>
-        <div x-show="step === 3">
-          <p>Step 3 content</p>
-        </div>
-        <div x-show="step === 4">
-          <p>Step 4 content</p>
-        </div>
-        <div class="flex justify-between mt-4">
-          <button class="btn btn-primary" x-show="step > 1" @click="step--"
-            >Previous</button
-          >
-          <button class="btn btn-primary" x-show="step < 4" @click="step++"
-            >Next</button
-          >
-        </div>
-      </div>
-    </div>
-  </div>
+  <section
+    x-data="{ step: 'step1', winetype: 'both', quantity: '6', howoften: 'weekly', amount: '4' }"
+  >
+    <header class="border-b border-slate-500 pt-4 pb-8">
+      <p class="pb-2">Configure your subscription in 4 easy steps:</p>
+      <ul>
+        <li
+          class="inline pr-2"
+          :class="{ 'border-black border-b': step === 'step1' }"
+        >
+          1: Wine type
+        </li>
+        <li
+          class="inline pr-2"
+          :class="{ 'border-black border-b': step === 'step2' }"
+        >
+          2: Quantity
+        </li>
+        <li
+          class="inline pr-2"
+          :class="{ 'border-black border-b': step === 'step3' }"
+        >
+          3: Delivery frequency
+        </li>
+        <li
+          class="inline pr-2"
+          :class="{ 'border-black border-b': step === 'step4' }"
+        >
+          4: Confirmation
+        </li>
+      </ul>
+    </header>
+  </section>
 </MainLayout>
 
 <style></style>
