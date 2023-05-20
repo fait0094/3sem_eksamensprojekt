@@ -1,7 +1,6 @@
 ---
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
-import CardSektion from "../components/CardSektion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Splash from "../components/Splash.astro";
 import Intro from "../components/Intro.astro";
@@ -19,36 +18,309 @@ import "..//styles/style.css";
     description="Vi har gjort det nemt og enkelt at bidrage med en donation. Vælg mellem en enkel, månedlig eller virksomheds-donation og udfyld formularen."
   />
 
-  <!-- Indsæt indhold i main her -->
-  <div class="grid">
-    <section class="form">
-      <div class="steps">
-        <ul class="steps">
-          <li class="step step-primary">Udvælg</li>
-          <li class="step">Oplysninger</li>
-          <li class="step">Betaling</li>
-          <li class="step">Bekræftelse</li>
+  <!-- FORM FORM FORM FORM -->
+  <!-- <div class="steps">
+    <ul class="steps">
+      <li class="step step-primary">Udvælg</li>
+      <li class="step">Oplysninger</li>
+      <li class="step">Betaling</li>
+      <li class="step">Bekræftelse</li>
+    </ul>
+  </div> -->
+
+  <div class="grid max-w-6xl">
+    <section
+      class="form-content mb-8 border-2 border-black p-8 pb-4"
+      id="step"
+      x-data="{ step: 'step1', winetype: 'both', quantity: '6', howoften : 'weekly', amount : '4'}"
+    >
+      <header class="border-b border-slate-500 pt-4 pb-8">
+        <p class="pb-2">Gennemfør din donation på 4 enkle trin:</p>
+        <ul class="">
+          <li
+            class="inline pr-2"
+            :class="{'border-black border-b': step === 'step1' }"
+          >
+            1: Udvælg
+          </li>
+          <li
+            class="inline pr-2"
+            :class="{'border-black border-b': step === 'step2' }"
+          >
+            2: Oplysninger
+          </li>
+          <li
+            class="inline pr-2"
+            :class="{'border-black border-b': step === 'step3' }"
+          >
+            3: Betaling
+          </li>
+          <li
+            class="inline pr-2"
+            :class="{'border-black border-b': step === 'step4' }"
+          >
+            4: Bekræftelse
+          </li>
         </ul>
+      </header>
+
+      <div class="border-b border-slate-500 py-8">
+        <!-- step 1 -->
+        <div id="step1" x-show="step === 'step1'">
+          <p class="mb-4">Vælg din donationstype.</p>
+          <form id="winesubscriptionform" class="grid grid-cols-3">
+            <Card
+              title="Enkel donation"
+              description="Med denne mulighed donerer du et engangsbeløb og du bestemmer selv beløbets størrelse."
+              imgPath="/public/ikoner/hjerte-ikon.png"
+            />
+            <Card
+              title="Månedlig donation"
+              description=" De fleste vælger denne mulighed, hvor du kan vælge, hvilket beløb du ønsker at støtte dyrene med hver måned."
+              imgPath="/public/ikoner/hjerte-ikon.png"
+            />
+            <Card
+              title="Virksomhedsdonation"
+              description="Vil din virksomhed hjælpe Dyreværnet med at redde dyr? Man kan hjælpe med en donation eller ved at blive sponsor."
+              imgPath="/public/ikoner/hjerte-ikon.png"
+            />
+          </form>
+        </div>
+
+        <!-- step 2-->
+        <div id="step2" x-show="step === 'step2'">
+          <p>Vælg dit beløb og udfyld dine personlige oplysninger.</p>
+
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">200 DKK</span>
+              <input
+                type="radio"
+                name="radio-10"
+                class="radio checked:bg-primary_blue"
+                checked
+              />
+            </label>
+          </div>
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">300 DKK</span>
+              <input
+                type="radio"
+                name="radio-10"
+                class="radio checked:bg-primary_blue"
+                checked
+              />
+            </label>
+          </div>
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">400 DKK</span>
+              <input
+                type="radio"
+                name="radio-10"
+                class="radio checked:bg-primary_blue"
+                checked
+              />
+            </label>
+          </div>
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">Andet</span>
+              <input
+                type="radio"
+                name="radio-10"
+                class="radio checked:bg-primary_blue"
+                checked
+              />
+            </label>
+          </div>
+
+          <div>
+            <label class="label">
+              <span class="label-text text-lg text-white">Fulde navn</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Indtast navn"
+              class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+            />
+          </div>
+
+          <div>
+            <label class="label">
+              <span class="label-text text-lg text-white">Email</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Indtast email"
+              class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+            />
+          </div>
+
+          <div>
+            <label class="label">
+              <span class="label-text text-lg text-white">Telefonnummer</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Indtast telefonnummer"
+              class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+            />
+          </div>
+        </div>
+
+        <!-- step 3 -->
+        <div id="step3" x-show="step === 'step3'">
+          <p>Vælg din betalingsmetode og udfyld dine oplysninger.</p>
+          <label class="label cursor-pointer">
+            <span class="label-text">Betalingskort</span>
+            <input
+              type="radio"
+              name="radio-10"
+              class="radio checked:bg-primary_blue"
+              checked
+            />
+          </label>
+
+          <div>
+            <label class="label">
+              <span class="label-text text-lg text-white">Navn på kortet</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Indtast navn på kortet"
+              class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+            />
+          </div>
+
+          <div>
+            <label class="label">
+              <span class="label-text text-lg text-white">Kortnummer</span>
+            </label>
+            <input
+              type="text"
+              placeholder="0000 0000 00000 0000"
+              class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+            />
+          </div>
+
+          <div class="grid_2">
+            <div>
+              <label class="label">
+                <span class="label-text text-lg text-white">Udløbsdato</span>
+              </label>
+              <input
+                type="text"
+                placeholder="MM/ÅÅ"
+                class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+              />
+            </div>
+            <div>
+              <label class="label">
+                <span class="label-text text-lg text-white">Kontrolcifre</span>
+              </label>
+              <input
+                type="text"
+                placeholder="000"
+                class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
+              />
+            </div>
+          </div>
+
+          <label class="label cursor-pointer">
+            <span class="label-text">MobilePay</span>
+            <input
+              type="radio"
+              name="radio-10"
+              class="radio checked:bg-primary_blue"
+              checked
+            />
+          </label>
+        </div>
+
+        <!-- step 4-->
+        <div id="step4" x-show="step === 'step4'" class="prose">
+          <h2>Tak for din donation!</h2>
+          <p>
+            Vi sender detaljer om din donation til den angivne mailadresse. Du
+            vil modtage en bekræftelse, kvittering og yderligere information om
+            vores organisation og hvordan din støtte hjælper dyrene i nød. Vi
+            sætter stor pris på din generøsitet og takker dig for at være en del
+            af vores indsats for dyrevelfærd. Hvis du har spørgsmål eller brug
+            for yderligere hjælp, er du velkommen til at kontakte os. Vi er her
+            for at hjælpe dig. Tak igen for din donation! Med venlig hilsen,
+            Dyreværnet
+          </p>
+        </div>
       </div>
-      <div class="cards">
-        <Card
-          title="Enkel donation"
-          description="Med denne mulighed donerer du et engangsbeløb og du bestemmer selv beløbets størrelse."
-          imgPath="/public/ikoner/hjerte-ikon.png"
-        />
-        <Card
-          title="Månedlig donation"
-          description=" De fleste vælger denne mulighed, hvor du kan vælge, hvilket beløb du ønsker at støtte dyrene med hver måned."
-          imgPath="/public/ikoner/hjerte-ikon.png"
-        />
-        <Card
-          title="Virksomhedsdonation"
-          description="Vil din virksomhed hjælpe Dyreværnet med at redde dyr? Man kan hjælpe med en donation eller ved at blive sponsor."
-          imgPath="/public/ikoner/hjerte-ikon.png"
-        />
-      </div>
-      <Button>Næste</Button>
+
+      <footer class="flex justify-between py-8">
+        <div class="">
+          <!-- <Button variant="primary">Næste</Button> -->
+          <button
+            id="knap2"
+            class="border-2 border-black p-2"
+            x-on:click="step = 'step1'"
+            x-show="step === 'step2'"
+          >
+            &LeftArrow; Udvælg
+          </button>
+          <button
+            id="knap3"
+            class="border-2 border-black p-2"
+            x-on:click="step = 'step2'"
+            x-show="step === 'step3'"
+          >
+            &LeftArrow; Oplysninger
+          </button>
+          <button
+            id="knap4"
+            class="border-2 border-black p-2"
+            x-on:click="step = 'step3'"
+            x-show="step === 'step4'"
+          >
+            &LeftArrow; Betaling
+          </button>
+        </div>
+        <div class="">
+          <button
+            id="knap2"
+            class="border-2 border-black p-2"
+            x-on:click="step = 'step2'"
+            x-show="step === 'step1'"
+          >
+            Oplysninger &RightArrow;
+          </button>
+          <button
+            id="knap3"
+            class="border-2 border-black p-2"
+            x-on:click="step = 'step3'"
+            x-show="step === 'step2'"
+          >
+            Betaling &RightArrow;
+          </button>
+          <button
+            id="knap4"
+            class="border-2 border-black p-2"
+            x-on:click="step = 'step4'"
+            x-show="step === 'step3'"
+          >
+            Bekræftelse &RightArrow;
+          </button>
+          <button
+            id="knap4"
+            class="border-2 border-black bg-green-200 p-2"
+            x-on:click="step = 'step4'"
+            x-show="step === 'step4'"
+          >
+            Tilbage
+          </button>
+        </div>
+      </footer>
     </section>
+
+    <!-- FORM FORM FORM FORM -->
 
     <section class="info">
       <div>
@@ -78,96 +350,20 @@ import "..//styles/style.css";
       </div>
     </section>
   </div>
-
-  <section>
-    <div class="form-control mx-auto w-full max-w-xl gap-3">
-      <div class="form-control">
-        <label class="label cursor-pointer">
-          <span class="label-text">Red pill</span>
-          <input
-            type="radio"
-            name="radio-10"
-            class="radio checked:bg-red-500"
-            checked
-          />
-        </label>
-      </div>
-      <div class="form-control">
-        <label class="label cursor-pointer">
-          <span class="label-text">Blue pill</span>
-          <input
-            type="radio"
-            name="radio-10"
-            class="radio checked:bg-blue-500"
-            checked
-          />
-        </label>
-      </div>
-      <div class="form-control">
-        <label class="label cursor-pointer">
-          <span class="label-text">Red pill</span>
-          <input
-            type="radio"
-            name="radio-10"
-            class="radio checked:bg-red-500"
-            checked
-          />
-        </label>
-      </div>
-      <div class="form-control">
-        <label class="label cursor-pointer">
-          <span class="label-text">Red pill</span>
-          <input
-            type="radio"
-            name="radio-10"
-            class="radio checked:bg-red-500"
-            checked
-          />
-        </label>
-      </div>
-
-      <div>
-        <label class="label">
-          <span class="label-text text-lg text-white">Fulde navn</span>
-        </label>
-        <input
-          type="text"
-          placeholder="Indtast navn"
-          class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
-        />
-      </div>
-
-      <div>
-        <label class="label">
-          <span class="label-text text-lg text-white">Email</span>
-        </label>
-        <input
-          type="text"
-          placeholder="Indtast email"
-          class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
-        />
-      </div>
-
-      <div>
-        <label class="label">
-          <span class="label-text text-lg text-white">Telefonnummer</span>
-        </label>
-        <input
-          type="text"
-          placeholder="Indtast emne"
-          class="input-bordered input w-full max-w-xl bg-white text-custom_purple dark:bg-white"
-        />
-      </div>
-
-      <Button variant="primary">Næste</Button>
-    </div>
-  </section>
 </MainLayout>
 
 <style>
+  /* Sæt i en mediaquery */
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 
   .info {
