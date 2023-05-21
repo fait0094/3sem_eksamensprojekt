@@ -1,0 +1,41 @@
+---
+import "..//styles/style.css";
+const {name, race, color, weight, sex, age, location, price} = Astro.props;
+---
+
+<section class="grid grid-cols-2">
+  <h2>{name}</h2>
+
+  <div class="flex">
+    <img src="ikoner/paw.svg" alt="race" />
+    <div><h3>Race</h3> <p>{race}</p></div>
+  </div>
+
+  <div class="flex">
+    <img src="ikoner/color.svg" alt="race" />
+    <div><h3>Color</h3> <p>{color}</p></div>
+  </div>
+
+  <div class="flex">
+    <img src="ikoner/weight.svg" alt="race" />
+    <div><h3>Weight</h3> <p>{weight}</p></div>
+  </div>
+
+  <div class="flex">
+    <img src="ikoner/sex.svg" alt="race" />
+    <div><h3>Sex</h3> <p>{sex}</p></div>
+  </div>
+
+  <div class="flex">
+    <img src="ikoner/age.svg" alt="race" />
+    <div><h3>Age</h3> <p>{age}</p></div>
+  </div>
+  <div class="flex">
+    <img src="ikoner/location.svg" alt="race" />
+    <div><h3>Location</h3> <p>{location}</p></div>
+  </div>
+  <div class="flex">
+    <img src="ikoner/price.svg" alt="race" />
+    <div><h3>Price</h3> <p>{price}</p></div>
+  </div>
+</section>
