@@ -15,6 +15,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         barlow: ["Barlow", "sans-serif"],
       },
+
     },
   },
   plugins: [require("daisyui")],
