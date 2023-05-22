@@ -1,5 +1,5 @@
 ---
-const { title, description, imgPath } = Astro.props;
+const { splash_title, splash_description, imgPath } = Astro.props;
 import "..//styles/style.css";
 ---
 
@@ -8,8 +8,8 @@ import "..//styles/style.css";
     <div class="hero-overlay bg-opacity-20"></div>
     <div class="hero-content text-neutral-content">
       <div class="">
-        <h1 class="">{title}</h1>
-        <p class="">{description}</p>
+        <h1 class="">{splash_title}</h1>
+        <p class="">{splash_description}</p>
       </div>
     </div>
   </div>
