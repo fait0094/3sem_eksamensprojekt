@@ -12,64 +12,19 @@ import Testimonial from "../components/Testimonial.astro";
 ---
 
 <SecondLayout title="3. SEM - Eksamensprojekt">
-  <Button variant="primary_1" size="medium">Støt dyrene</Button>
-  <Button variant="primary_2" size="medium">Find kæledyr</Button>
-  <Button variant="secondary" size="medium">Næste</Button>
-  <Testimonial
-    title="»De dygtigste matchmakere«"
-    description="“De er dygtige matchmakere, og grundige i deres research af adoptionsfamilier. I er så glade for dyr, og det var vigtigt for mig, at Buller skulle være glad fra dag 1, uanset hvad han laver af unoder.”"
-    ejer="Betina, tidligere ejer af Buller"
-    imgPath="/public/adoption/basse.webp"
-  />
-  <Faktaboks
-    text="Ring til os på hverdage mellem 9.30 - 12.00 på telefonnummer 4494 6695"
-  />
-  <CardSektion />
-
-  <Card
-    imgPath="adoption/basse.webp"
-    title="Basse"
-    description="De er dygtige matchmakere, og grundige i deres research af adoptionsfamilier."
-  >
-    <img src="gender_icon.svg" alt="gender-icon" />
-  </Card>
-  <Card
-    imgPath="adoption/basse.webp"
-    kategori="How to"
-    title="Basse"
-    description="De er dygtige matchmakere, og grundige i deres research af adoptionsfamilier."
-  />
-</SecondLayout>
-
-<SecondLayout title="3. SEM - Eksamensprojekt">
   <main>
-    <div></div>
+    <div class="">
+      <img src="../splash/hundsplash.webp" alt="Hund" class="z-0 w-full h-full" />
+    </div>
+    <div class="text-primary_white z-10 absolute top-[32rem] ">
+      <h1 class="">ALLE DYR FORTJENER ET GODT HJEM</h1>
+      <p class="pt-5">Vi er dedikeret til at redde og beskytte dyr i nød. Vi arbejder for at finde kærlige hjem til vores pelsede venner og sikre, at de får den omsorg og opmærksomhed, de fortjener.</p>
+      <Button variant="primary_1" size="medium">STØT</Button>
+    </div>
+  </main>
 
-    <section class="hero">
-      <div>
-        <img src="../splash/splash.webp" alt="Hund" class="w-screen bg-cover" />
-      </div>
-
-      <div class="grid text-white justify-start">
-        <div class="">
-          <h1>ALLE DYR FORTJENER ET GODT HJEM</h1>
-          <p class="pt-5">
-            Vi er dedikeret til at redde og beskytte dyr i nød. Vi arbejder for
-            at finde kærlige hjem til vores pelsede venner og sikre, at de får
-            den omsorg og opmærksomhed, de fortjener.
-          </p>
-          <div class="pt-5">
-            <Button variant="primary_1" size="medium">STØT</Button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-secondary_beige">
-      <Intro
-        title="KLAR TIL EN NY VEN?"
-        description="Læs om alle de dejlige hunde, katte, kaniner og smådyr her på siden og find netop det dyr der passer perfekt til dit hjem."
-      />
+  <!-- <section class="bg-secondary_beige">
+      <Intro title="KLAR TIL EN NY VEN?" description="Læs om alle de dejlige hunde, katte, kaniner og smådyr her på siden og find netop det dyr der passer perfekt til dit hjem." />
 
       <div class="mb-10 grid grid-cols-2 lg:ml-10">
         <div class="flex gap-10 align-baseline">
@@ -105,20 +60,10 @@ import Testimonial from "../components/Testimonial.astro";
           </div>
 
           <p class="justify-center grid pt-4">
-            venter på nyt hjem. Ingen fortjener at være alene <br />- adopter
-            fra fyreværnet og gør en forskel
+            venter på nyt hjem. Ingen fortjener at være alene <br />- adopter fra fyreværnet og gør en forskel
           </p>
           <Button variant="primary_1" size="medium">FIND KÆLEDYR</Button>
-
-          <p class="justify-center grid pt-4">
-            venter på nyt hjem. Ingen fortjener at være alene <br />- adopter
-            fra fyreværnet og gør en forskel
-          </p>
-          <Button variant="primary_1" size="medium" class="grid mx-auto">
-            FIND KÆLEDYR
-          </Button>
         </div>
       </div>
-    </section>
-  </main>
+    </section> -->
 </SecondLayout>

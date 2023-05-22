@@ -8,12 +8,10 @@ import Faktaboks from "../components/Faktaboks.astro";
 import CardSektion from "../components/CardSektion.astro";
 ---
 
-<MainLayout title="3. SEM - Eksamensprojekt">
-  <!-- <Splash title="Værd at vide om os" description="Find alt du skal vide om Dyreværnet her på siden." imgPath="/public/splash/om.webp" />
-  <Intro title="Om Dyreværnet" /> -->
-
-  <section class="grid grid-cols-2 grid-rows-2 ">
-    <div >
+<MainLayout class="col-span-2" title="3. SEM - Eksamensprojekt" splash_title="Værd at vide om os" splash_description="Find alt du skal vide om Dyreværnet her på siden." imgPath="/public/splash/donation.jpg" intro_title="Din donation gør en forskel" intro_description="Vi har gjort det nemt og enkelt at bidrage med en donation. Vælg mellem en enkel, månedlig eller virksomheds-donation og udfyld formularen." <main>
+  
+  <section class="grid grid-cols-2 grid-rows-2 max-w-6xl mx-auto gap-16">
+    <div>
       <h3 class="uppercase">Dyreværnets formål og arbejde</h3>
       <p>
         Dyreværnet er en af Danmarks ældste dyreværnsforeninger og vores vision er enkel, og fungerer som ledestjerne i alle Dyreværnets tiltag, nemlig at »Alle kæledyr i Danmark skal have et godt hjem«. Vores vision går hånd i hånd med vores holdning om at »Hver en pote tæller«.
@@ -21,7 +19,7 @@ import CardSektion from "../components/CardSektion.astro";
       </p>
     </div>
 
-    <div class="faktaboks bg-secondary_beige w-96 p-12 rounded row-span-2 ">
+    <div class="bg-secondary_beige p-12 rounded row-span-2 leading-relaxed">
       <Faktaboks header="Dyreværnet i korte vuf..." text="...Hjælper hvert år over 1.200 kæledyr med at finde deres nye familie">
         <img src="blue_paw.svg" alt="iconlist" />
       </Faktaboks>
