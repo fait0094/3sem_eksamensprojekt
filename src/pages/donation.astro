@@ -2,8 +2,6 @@
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import Splash from "../components/Splash.astro";
-import Intro from "../components/Intro.astro";
 import "..//styles/style.css";
 ---
 
@@ -65,7 +63,7 @@ import "..//styles/style.css";
         <!-- step 1 -->
         <div id="step1" x-show="step === 'step1'">
           <p class="mb-4">Vælg din donationstype.</p>
-          <form id="winesubscriptionform" class="grid grid-cols-3">
+          <form id="winesubscriptionform" class="grid lg:grid-cols-3">
             <Card
               title="Enkel donation"
               description="Med denne mulighed donerer du et engangsbeløb og du bestemmer selv beløbets størrelse."
@@ -202,7 +200,7 @@ import "..//styles/style.css";
             />
           </div>
 
-          <div class="grid_2">
+          <div class="grid lg:grid-cols-2">
             <div>
               <label class="label">
                 <span class="label-text text-lg text-white">Udløbsdato</span>
@@ -319,7 +317,7 @@ import "..//styles/style.css";
 
     <!-- FORM FORM FORM FORM -->
 
-    <section class="info">
+    <section class="info row-start-1">
       <div>
         <h3>Bankoverførsel</h3>
         <p>
@@ -353,7 +351,8 @@ import "..//styles/style.css";
   /* Sæt i en mediaquery */
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    /* align-items: center; */
     gap: 30px;
   }
 
@@ -363,9 +362,9 @@ import "..//styles/style.css";
     gap: 30px;
   }
 
-  .info {
+  /* .info {
     grid-row-start: 1;
-  }
+  } */
   .cards {
     display: flex;
     justify-content: center;
