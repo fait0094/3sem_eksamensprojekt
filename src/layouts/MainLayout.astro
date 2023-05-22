@@ -3,7 +3,14 @@ import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const { title, splash_title, splash_description, imgPath, intro_title, intro_description } = Astro.props;
+const {
+  title,
+  splash_title,
+  splash_description,
+  imgPath,
+  intro_title,
+  intro_description,
+} = Astro.props;
 ---
 
 <html lang="da">
@@ -21,7 +28,10 @@ const { title, splash_title, splash_description, imgPath, intro_title, intro_des
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2"></script>
     <script src="/path/to/main.js" type="module"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Poppins&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
   </head>
   <body>
@@ -53,6 +63,4 @@ const { title, splash_title, splash_description, imgPath, intro_title, intro_des
   </body>
 </html>
 
-<style>
-
-</style>
+<style></style>
