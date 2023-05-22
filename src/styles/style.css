@@ -109,7 +109,19 @@ h4,
   font-weight: 700;
 }
 
+h5 {
+  font-size: var(--body-small);
+  font-family: "Poppins", sans-serif;
+  max-width: 65ch;
+}
+
 p {
+  font-family: "Poppins", sans-serif;
+  max-width: 65ch;
+}
+
+li {
+  font-size: var(--body-small);
   font-family: "Poppins", sans-serif;
   max-width: 65ch;
 }
