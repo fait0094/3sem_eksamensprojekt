@@ -38,7 +38,7 @@ const {
 
     <!-- Splash -->
     <section class="splash">
-      <div class="hero" style={`background-image: url(${imgPath});`}>
+      <div class="hero h-60" style={`background-image: url(${imgPath});`}>
         <div class="hero-overlay bg-opacity-20"></div>
         <div class="hero-content text-neutral-content">
           <div class="">
@@ -50,14 +50,18 @@ const {
     </section>
 
     <!-- Intro -->
-    <section class="flex flex-col items-center text-center">
+    <section class="flex flex-col items-center text-center my-12 mb-20">
       <h2>{intro_title}</h2>
       <p>{intro_description}</p>
     </section>
 
-    <main>
+    <main class="max-w-6xl mx-auto">
       <slot />
     </main>
     <Footer />
   </body>
 </html>
+
+<style>
+
+</style>

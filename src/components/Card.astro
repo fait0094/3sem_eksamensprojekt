@@ -1,11 +1,11 @@
 ---
 import Button from "./Button.astro";
 import "..//styles/style.css";
-const { title, description, imgPath, kategori } = Astro.props;
+const { title, description, imgPath, kategori, link_side } = Astro.props;
 ---
 
-<section>
-  <div class="card w-96 bg-base-100 shadow-xl">
+<section class="">
+  <div class="card w-96 shadow-xl">
     <figure class="px-10 pt-10">
       <img src={imgPath} alt="hund_til_adoption" />
     </figure>
@@ -19,7 +19,7 @@ const { title, description, imgPath, kategori } = Astro.props;
       </div>
       <p>{description}</p>
       <div class="card-actions">
-        <Button variant="primary">Læs mere</Button>
+        <a href={link_side}><Button variant="primary">Læs mere</Button></a>
       </div>
     </div>
   </div>
