@@ -2,8 +2,7 @@
 import Button from "../components/Button.astro";
 import CardSektion from "../components/CardSektion.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import Splash from "../components/Splash.astro";
-import Intro from "../components/Intro.astro";
+
 import Card from "../components/Card.astro";
 import "..//styles/style.css";
 ---
@@ -17,34 +16,26 @@ import "..//styles/style.css";
   intro_description="Vi har gjort det nemt og enkelt at bidrage med en donation. Vælg mellem en enkel, månedlig eller virksomheds-donation og udfyld formularen."
 >
   <!-- Indsæt indhold i main her -->
-  <section>
+  <section class="gap-8 lg:flex lg:justify-center">
     <Card
       title="Donation"
       description="Vil du hjælpe Dyreværnet med at redde dyr?  Vælg mellem enkelt, månedlig eller virksomhedsdonation og vær med til at redde dyreliv."
       imgPath="/public/adoption/basse.webp"
-      link_side="test.html"
+      link_side="donation.html"
     />
     <Card
       title="Betænk dyrene i testamentet"
       description="Testamentariske gaver er meget vigtige for Dyreværnets arbejde og eksistens. Vi kan hjælpe med oprettelse af testamente."
       imgPath="/public/adoption/basse.webp"
-      link_side=""
+      link_side="donation.html"
     />
     <Card
       title="Indsamling via Facebook"
       description="På Facebook kan du nemt samle penge ind til Dyreværnets hunde, katte, kaniner & smådyr"
       imgPath="/public/adoption/basse.webp"
-      link_side=""
+      link_side="donation.html"
     />
   </section>
 </MainLayout>
 
-<style>
-  @media (min-width: 950px) {
-    section {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-  }
-</style>
+<style></style>
